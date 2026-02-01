@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   color-scheme: light;
   font-family: "Space Grotesk", "Segoe UI", sans-serif;
   background: #0f172a;
@@ -26,6 +26,13 @@ body {
 .remote__copy {
   margin: 0;
   line-height: 1.6;
+}
+
+.remote__list {
+  margin: 16px 0 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 6px;
 }
 
 .section-card {

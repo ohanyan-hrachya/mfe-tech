@@ -16,6 +16,10 @@ pnpm -C apps/remote-marketing dev
 pnpm -C apps/shell dev
 ```
 
+## Backend (BFF)
+The marketing remote pulls campaigns from the BFF.
+- Set `VITE_BFF_URL` (default `http://localhost:4000`)
+
 ## Quality toolchain
 - Format: `pnpm format` / `pnpm format:check`
 - Lint: `pnpm lint`
