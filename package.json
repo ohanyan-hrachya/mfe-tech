@@ -1,0 +1,15 @@
+﻿{
+  "name": "mfe-tech",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@9.15.0",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "pnpm -r --parallel dev",
+    "build": "pnpm -r build",
+    "preview": "pnpm -r preview",
+    "lint": "pnpm -r lint"
+  }
+}
