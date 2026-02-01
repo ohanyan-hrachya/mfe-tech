@@ -5,6 +5,7 @@
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "jsx": "react-jsx",
     "moduleResolution": "bundler",
+    "types": ["jest", "@testing-library/jest-dom"],
     "strict": true,
     "skipLibCheck": true,
     "noEmit": true

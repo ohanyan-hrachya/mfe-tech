@@ -16,7 +16,9 @@ export function initSentry() {
 }
 
 export function withSentryProfiler<T>(Component: ComponentType<T>) {
-  return sentryEnabled ? Sentry.withProfiler(Component) : Component;
+  return sentryEnabled
+    ? (Sentry.withProfiler(Component as ComponentType<Record<string, unknown>>) as ComponentType<T>)
+    : Component;
 }
 
 export const SentryErrorBoundary = Sentry.ErrorBoundary;
