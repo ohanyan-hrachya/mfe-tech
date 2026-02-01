@@ -6,7 +6,7 @@ describe('SectionCard', () => {
     render(
       <SectionCard title="Highlights">
         <p>Content</p>
-      </SectionCard>
+      </SectionCard>,
     );
 
     expect(screen.getByText('Highlights')).toBeInTheDocument();

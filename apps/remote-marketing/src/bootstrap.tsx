@@ -18,10 +18,8 @@ const app = (
 
 ReactDOM.createRoot(root).render(
   sentryEnabled ? (
-    <SentryErrorBoundary fallback={<div>Something went wrong.</div>}>
-      {app}
-    </SentryErrorBoundary>
+    <SentryErrorBoundary fallback={<div>Something went wrong.</div>}>{app}</SentryErrorBoundary>
   ) : (
     app
-  )
+  ),
 );

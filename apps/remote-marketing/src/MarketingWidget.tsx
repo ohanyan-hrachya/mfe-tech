@@ -21,7 +21,7 @@ export function MarketingWidget() {
     async function loadCampaigns() {
       try {
         const response = await fetch(`${bffUrl}/api/marketing/campaigns`, {
-          signal: controller.signal
+          signal: controller.signal,
         });
         if (!response.ok) {
           return;
@@ -54,7 +54,7 @@ export function MarketingWidget() {
           {campaigns.map((campaign) => (
             <li key={campaign.id}>
               <strong>{campaign.title}</strong>
-              {campaign.description ? ` — ${campaign.description}` : ''}
+              {campaign.description ? ` ï¿½ ${campaign.description}` : ''}
               {campaign.status ? ` (${campaign.status})` : ''}
             </li>
           ))}

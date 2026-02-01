@@ -5,7 +5,7 @@ const config = {
   testMatch: ['**/?(*.)+(test|spec).[tj]s?(x)'],
   moduleNameMapper: {
     '^@shared-ui$': '<rootDir>/packages/shared-ui/src/index.ts',
-    '^@shared-ui/(.*)$': '<rootDir>/packages/shared-ui/src/$1'
+    '^@shared-ui/(.*)$': '<rootDir>/packages/shared-ui/src/$1',
   },
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   extensionsToTreatAsEsm: ['.ts', '.tsx'],
@@ -14,17 +14,13 @@ const config = {
       'ts-jest',
       {
         useESM: true,
-        tsconfig: '<rootDir>/tsconfig.jest.json'
-      }
-    ]
+        tsconfig: '<rootDir>/tsconfig.jest.json',
+      },
+    ],
   },
   testPathIgnorePatterns: ['/node_modules/', '/dist/', '/coverage/'],
-  collectCoverageFrom: [
-    'apps/**/*.{ts,tsx}',
-    'packages/**/*.{ts,tsx}',
-    '!**/*.d.ts'
-  ],
-  coverageDirectory: '<rootDir>/coverage'
+  collectCoverageFrom: ['apps/**/*.{ts,tsx}', 'packages/**/*.{ts,tsx}', '!**/*.d.ts'],
+  coverageDirectory: '<rootDir>/coverage',
 };
 
 module.exports = config;
